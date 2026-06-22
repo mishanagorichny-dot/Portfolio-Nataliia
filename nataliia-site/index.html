@@ -27,18 +27,18 @@ body{
   background:
     linear-gradient(180deg,
       #0D0200 0%,
-      #1a0800 6%,
-      #C45020 16%,
-      #E8784A 22%,
-      #F5B08A 28%,
-      #FDE8DC 33%,
-      #FFFFFF 40%,
-      #FFFFFF 60%,
-      #FDE8DC 67%,
-      #F5B08A 72%,
-      #E8784A 78%,
-      #C45020 84%,
-      #1a0800 94%,
+      #1a0800 4%,
+      #C45020 10%,
+      #E8784A 14%,
+      #F5B08A 18%,
+      #FDE8DC 22%,
+      #FFFFFF 27%,
+      #FFFFFF 73%,
+      #FDE8DC 78%,
+      #F5B08A 82%,
+      #E8784A 86%,
+      #C45020 90%,
+      #1a0800 96%,
       #0D0200 100%
     );
   min-height:100vh;
@@ -254,7 +254,7 @@ h2 .o{color:var(--orange)}
   display:grid;grid-template-columns:1fr 1fr;
   border:1px solid var(--border);border-radius:4px;overflow:hidden;
   margin-bottom:2px;
-  background:rgba(255,255,255,0.12);
+  background:rgba(255,255,255,0.25);
   backdrop-filter:blur(8px);
   transition:border-color .3s var(--ease),transform .3s var(--ease),box-shadow .3s;
 }
@@ -270,7 +270,7 @@ h2 .o{color:var(--orange)}
 .case-visual{
   overflow:hidden;position:relative;
   min-height:480px;
-  background:transparent;
+  background:rgba(255,255,255,0.25);
   display:flex;align-items:center;justify-content:center;
 }
 .case-visual img{
@@ -285,7 +285,7 @@ h2 .o{color:var(--orange)}
 
 .case-info{
   padding:52px 48px;display:flex;flex-direction:column;justify-content:center;gap:18px;
-  background:rgba(255,255,255,0.25);backdrop-filter:blur(8px);
+  background:rgba(255,255,255,0.25);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
 }
 .case-num{font-family:var(--f-display);font-size:.7rem;font-weight:300;letter-spacing:.1em;color:var(--orange)}
 .case-tags{display:flex;gap:6px;flex-wrap:wrap}
