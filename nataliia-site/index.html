@@ -21,27 +21,45 @@ body{
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
   position:relative;
-
-  /* The gradient from the reference image:
-     top: black → orange salmon → white center → orange salmon → black bottom */
-  background:
-    linear-gradient(180deg,
-      #1A0500 0%,
-      #5C1E08 5%,
-      #C45020 12%,
-      #E8784A 17%,
-      #F5B08A 21%,
-      #FDE8DC 25%,
-      #FFFFFF 29%,
-      #FFFFFF 71%,
-      #FDE8DC 75%,
-      #F5B08A 79%,
-      #E8784A 83%,
-      #C45020 88%,
-      #5C1E08 95%,
-      #1A0500 100%
-    );
+  background:#FFFFFF;
   min-height:100vh;
+}
+/* Fixed-height gradient bands — identical on all screen sizes */
+body::before{
+  content:'';
+  position:fixed;
+  top:0;left:0;right:0;
+  height:520px;
+  background:linear-gradient(180deg,
+    #1A0500 0%,
+    #5C1E08 8%,
+    #C45020 22%,
+    #E8784A 34%,
+    #F5B08A 46%,
+    #FDE8DC 60%,
+    #FFFFFF 80%,
+    transparent 100%
+  );
+  pointer-events:none;
+  z-index:0;
+}
+body::after{
+  content:'';
+  position:fixed;
+  bottom:0;left:0;right:0;
+  height:520px;
+  background:linear-gradient(0deg,
+    #1A0500 0%,
+    #5C1E08 8%,
+    #C45020 22%,
+    #E8784A 34%,
+    #F5B08A 46%,
+    #FDE8DC 60%,
+    #FFFFFF 80%,
+    transparent 100%
+  );
+  pointer-events:none;
+  z-index:0;
 }
 
 img{display:block;max-width:100%;height:auto}
@@ -400,6 +418,8 @@ footer{border-top:1px solid var(--border);padding:26px 0}
   </div>
 </nav>
 
+<div style="position:relative;z-index:1;">
+
 <ul class="mob-menu" id="mobMenu">
   <li><a href="#about" class="mob-l">About</a></li>
   <li><a href="#cases" class="mob-l">Cases</a></li>
@@ -575,6 +595,8 @@ footer{border-top:1px solid var(--border);padding:26px 0}
     </div>
   </div>
 </footer>
+
+</div>
 
 <script>
 const nav=document.getElementById('nav');
